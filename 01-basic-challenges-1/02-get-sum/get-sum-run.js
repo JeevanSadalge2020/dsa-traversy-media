@@ -1,5 +1,5 @@
-const getSum = require('./get-sum');
+const getSum = require("./get-sum");
 
-const result = getSum(1, 10);
+const result = getSum(11, 100);
 
 console.log(result);
