@@ -1,7 +1,13 @@
-const validateEmail = require('./validate-email');
+const validateEmail = require("./validate-email");
 
-const result1 = validateEmail('brad@gmail.com');
-const result2 = validateEmail('bradgmailcom');
-
-console.log(result1);
-console.log(result2);
+// Test cases
+console.log(validateEmail("test@example.com")); // true-
+console.log(validateEmail("test.email@domain.co.uk")); // true-
+console.log(validateEmail("")); // false-
+console.log(validateEmail("test@")); // false-
+console.log(validateEmail("@domain.com")); // false-
+console.log(validateEmail("test@domain")); // false-
+console.log(validateEmail("test..email@domain.com")); // false
+console.log(validateEmail(".test@domain.com")); // false-
+console.log(validateEmail("test@.domain.com")); // false
+console.log(validateEmail("test@domain..com")); // false
